@@ -13,12 +13,12 @@ class BarangController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+  public function index(Request $request)
     {
         //mencari data
         if ($request->has('cari')) {
             $barang = \App\barang::where('nama_barang','LIKE','%'.$request->cari.'%')->get();
-                  $merk = DB::table('merk')->get();
+            $merk = DB::table('merk')->get();
             $type = DB::table('type')->get();
         } else {
             $merk = DB::table('merk')->get();
@@ -32,6 +32,8 @@ class BarangController extends Controller
         }
         return view('dashboard.barang', compact('barang','merk','type'));
     }
+
+
     //   public function search(Request $request)
     // {
     //     $query = $request->input('cari');

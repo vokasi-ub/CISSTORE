@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <!-- Content Header (Page header) -->
     <section class="content-header">
-<h1>Data merk</h1>
+<h1>CISSTORE</h1>
 <br>
       <div class="box box-danger">
             <div class="box-header with-border">
@@ -89,6 +89,7 @@
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
+               <th>ID</th>
                 <th>Id_Merk</th>
                 <th>Merk</th>
                 
@@ -96,9 +97,12 @@
                  <th>Tanggal_update</th>
                 <th>Opsi</th></tr>
 
+                 <?php $no=1; ?>
              @foreach($merk as $merk)
                  <tr>
-                  <td>{{$merk->id_merk}}</td>
+                 <th>{{$no++}}</th>
+
+                 <td>{{$merk->id_merk}} </td>
                   <td>{{$merk->merk}}</td>
                   
                    <td>{{$merk->created_at}}</td>

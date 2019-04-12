@@ -15,8 +15,8 @@ class CreateBarangTable extends Migration
     {
         Schema::create('barang', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('id_type');
-            $table->string('id_merk');
+            $table->string('id_type',191);
+            $table->string('id_merk',191);
             $table->string('nama_barang',100);
             $table->string('asal_produksi',100);
             $table->string('deskripsi',150);

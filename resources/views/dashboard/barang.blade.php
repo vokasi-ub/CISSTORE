@@ -5,7 +5,7 @@
     <!-- Content Header (Page header) -->
     <!-- Content Header (Page header) -->
     <section class="content-header">
-<h1>Data barang</h1>
+<h1>CISSTORE</h1>
 <br>
       <div class="box box-danger">
             <div class="box-header with-border">
@@ -137,6 +137,7 @@
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
+               <th>ID</th>
                 <th>Id</th>
                 <th>type_barang</th>
                 <th>merk</th>
@@ -149,9 +150,12 @@
                  <th>Tanggal_updata</th>
                 <th>Opsi</th></tr>
 
+                 <?php $no=1; ?>
              @foreach($barang as $barang)
                  <tr>
-                  <td>{{$barang->id}}</td>
+                 <th>{{$no++}}</th>
+
+                 <td>{{$barang->id}} </td>
                   <td>{{$barang->type_barang}}</td>
                   <td>{{$barang->merk}}</td>
                   <td>{{$barang->nama_barang}}</td>

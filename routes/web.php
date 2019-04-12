@@ -10,6 +10,9 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function() {
+    return view('welcome');
+});
 
 Route::get('barang/{id}', function ($id) {
     return "hello user with id " .$id ;
@@ -44,3 +47,7 @@ Route::post('inputdata/type','TypeController@store');
 Route::get('/hapus/type/{id_type}', 'TypeController@destroy');
 Route::resource('type', 'typeController');
 Route::get('typeedit/edittype/{id_type}','typeController@edit');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
